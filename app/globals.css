@@ -1,0 +1,110 @@
+:root {
+  color-scheme: light;
+  --bg: #F2F5F4;
+  --surface: #FFFFFF;
+  --fg: #0F1B1D;
+  --muted: #56676A;
+  --accent: #10b8a6;
+  --accent-ink: #FFFFFF;
+  --line: #D3DCDB;
+  --band: #0D3B3F;
+  --band-fg: #F2F7F6;
+  --band-muted: #9FBABB;
+  --band-line: #2E5659;
+
+  --font-display: "Merriweather", serif;
+  --font-body: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  --font-sign: "Mrs Saint Delafield", "Snell Roundhand", cursive;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0B1416;
+    --surface: #111D20;
+    --fg: #EDF3F2;
+    --muted: #93A6A8;
+    --accent: #7CCBC6;
+    --accent-ink: #08191A;
+    --line: #223437;
+    --band: #123438;
+    --band-fg: #EDF6F5;
+    --band-muted: #9DBDBE;
+    --band-line: #2F5559;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #0B1416;
+  --surface: #111D20;
+  --fg: #EDF3F2;
+  --muted: #93A6A8;
+  --accent: #7CCBC6;
+  --accent-ink: #08191A;
+  --line: #223437;
+  --band: #123438;
+  --band-fg: #EDF6F5;
+  --band-muted: #9DBDBE;
+  --band-line: #2F5559;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  text-wrap: balance;
+  margin: 0;
+}
+
+h2 {
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  font-weight: 300;
+  font-style: italic;
+}
+
+p {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
